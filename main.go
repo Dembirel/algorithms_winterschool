@@ -4,13 +4,10 @@ import "fmt"
 
 func main() {
 	var a = Graph{make(map[int][]int)}
-	var b = Graph{make(map[int][]int)}
-	var c = Graph{make(map[int][]int)}
-	var d = Graph{make(map[int][]int)}
 	a.AddEdge(1, 2, false)
-	b.AddEdge(2, )
-	c.AddEdge()
-	d.AddEdge()
+	a.AddEdge(1, 4, false)
+	a.AddEdge(2, 3, false)
+	for 
 	if HasEdge(&a, 1, 2) {
 
 	}
