@@ -54,26 +54,22 @@ func NewGraph() *Graph {
 }
 
 func (g *Graph) AddEdge(u, v int, undirected bool) {
-	val, ok := g.adj[u]
-	g.adj[u] = append(g.adj[u], v)
-	if undirected {
-		g.adj[u] = append(g.adj[v], u)
-	}
-
+	/*_, ok := g.adj[u]
 	if ok {
 		g := NewGraph()
 		g.adj[u] = append(g.adj[u], v)
 		if undirected {
 			g.adj[u] = append(g.adj[v], u)
 		}
+	} else {*/
+	g.adj[u] = append(g.adj[u], v)
+	if undirected {
+		g.adj[u] = append(g.adj[v], u)
 	}
-
+	// }
 }
 
 func HasEdge(g *Graph, u, v int) bool {
-	// for i = 0, i < len(g.adj); i++ {
-
-	// }
 	for idx, value := range g.adj {
 		fmt.Println(idx, value)
 		for _, tmp := range value {
